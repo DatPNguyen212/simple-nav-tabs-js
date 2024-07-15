@@ -9,19 +9,30 @@
 :root {
   font-family: 'Roboto', sans-serif;
   --font-color: #fff;
+  --hover-logo-color: rgba(255, 55, 0, 1);
   --primary-color: #000;
+  --hover-button-color: rgba(211, 211, 211, 0.3);
+  --select-button-color: rgba(211, 211, 211, 0.2);
+  --hover-decoration-color: rgba(75, 157, 250, 0.8);
+  --hover-text-color: rgba(242, 198, 85, 1);
+  --nav-height: 80px;
   --logo-flex-basis: 100px;
 }
 
 .company-logo {
   color: var(--font-color);
   flex-basis: var(--logo-flex-basis);
+  padding-left: 1.5rem;
+}
+
+.company-logo:hover {
+  color: var(--hover-logo-color);
 }
 .nav-container {
   background: var(--primary-color);
   display: flex;
   flex-direction: row;
-  height: 80px;
+  height: var(--nav-height);
   justify-content: left;
   align-items: center;
   position: fixed;
@@ -37,10 +48,40 @@
 }
 
 .button {
-  width: 4rem;
-  height: 2rem;
-  padding: 0.25rem;
+  width: 5rem;
+  height: var(--nav-height);
   border: none;
   background: var(--primary-color);
   color: var(--font-color);
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.button > span {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.button:hover > span {
+  background: var(--hover-button-color);
+  color: var(--hover-text-color);
+}
+
+.button:hover::before {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--hover-decoration-color);
+  border-radius: 9999999999999999px;
 }
