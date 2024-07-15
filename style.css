@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  --font-color: #fff;
+  --primary-color: #000;
+  --logo-flex-basis: 100px;
+}
+
+.company-logo {
+  color: var(--font-color);
+  flex-basis: var(--logo-flex-basis);
+}
+.nav-container {
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  justify-content: left;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+}
+
+.nav-content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: calc(100vw - var(--logo-flex-basis));
+}
+
+.button {
+  width: 4rem;
+  height: 2rem;
+  padding: 0.25rem;
+  border: none;
+  background: var(--primary-color);
+  color: var(--font-color);
+}
