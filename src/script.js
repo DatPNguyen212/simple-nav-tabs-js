@@ -32,9 +32,7 @@ nodesNavButtons.forEach((node) => {
     iframe.setAttribute('title', title)
 
     nodesNavButtons.forEach((node) => {
-      if (node.getAttribute('class').includes('current-iframe')) {
-        node.classList.remove('current-iframe')
-      }
+      node.classList.remove('current-iframe')
     })
 
     event.target.classList.add('current-iframe')
