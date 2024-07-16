@@ -69,6 +69,7 @@
   align-items: center;
   padding: 0.5rem;
   border-radius: 0.5rem;
+  pointer-events: none;
 }
 
 .button:hover > span {
@@ -96,4 +97,5 @@
 iframe {
   margin-top: var(--nav-height);
   width: 100%;
+  border: none;
 }
