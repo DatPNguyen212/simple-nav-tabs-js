@@ -1,2 +1,0 @@
-const t=document.querySelectorAll(".button"),e=document.querySelector("iframe");let r=[];t.forEach(t=>{let e=t.getAttribute("data-href");r.push(e)});for(let a=0;a<=r.length-1;a++)e.getAttribute("src")===r[a]&&t[a].classList.add("current-iframe");t.forEach(r=>{r.addEventListener("click",r=>{let a=r.target.getAttribute("data-href");e.setAttribute("src",a),t.forEach(t=>{t.getAttribute("class").includes("current-iframe")&&t.classList.remove("current-iframe")}),r.target.classList.add("current-iframe")})});
-//# sourceMappingURL=index.d4af76e5.js.map
