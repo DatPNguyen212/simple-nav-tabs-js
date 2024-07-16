@@ -4,8 +4,10 @@ const iframe = document.querySelector('iframe')
 let arrayNavLinks = []
 
 nodesNavButtons.forEach((node) => {
-  const href = node.getAttribute('data-href')
-  arrayNavLinks.push(href)
+  let iframeInfo = {}
+  iframeInfo.href = node.getAttribute('data-href')
+  iframeInfo.title = node.getAttribute('data-title')
+  arrayNavLinks.push(iframeInfo)
 })
 
 // console.log(nodesNavButtons)
@@ -21,11 +23,14 @@ for (let i = 0; i <= arrayNavLinks.length - 1; i++) {
   }
 }
 
-// When button is clicked, unhighlight all buttons, then highlight the appropriate button:
+// When button is clicked, change iframe src, unhighlight all buttons, then highlight the appropriate button:
 nodesNavButtons.forEach((node) => {
   node.addEventListener('click', (event) => {
     const href = event.target.getAttribute('data-href')
+    const title = event.target.getAttribute('data-title')
     iframe.setAttribute('src', href)
+    iframe.setAttribute('title', title)
+
     nodesNavButtons.forEach((node) => {
       if (node.getAttribute('class').includes('current-iframe')) {
         node.classList.remove('current-iframe')
