@@ -18,7 +18,7 @@ nodesNavButtons.forEach((node) => {
 
 for (let i = 0; i <= arrayNavLinks.length - 1; i++) {
   const currentIframeSRC = iframe.getAttribute('src')
-  if (currentIframeSRC === arrayNavLinks[i]) {
+  if (currentIframeSRC === arrayNavLinks[i].href) {
     nodesNavButtons[i].classList.add('current-iframe')
   }
 }
