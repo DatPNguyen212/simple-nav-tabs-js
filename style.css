@@ -12,7 +12,7 @@
   --hover-logo-color: rgba(255, 55, 0, 1);
   --primary-color: #000;
   --hover-button-color: rgba(211, 211, 211, 0.3);
-  --select-button-color: rgba(211, 211, 211, 0.2);
+  --select-button-color: rgba(211, 211, 211, 0.25);
   --hover-decoration-color: rgba(75, 157, 250, 0.8);
   --hover-text-color: rgba(242, 198, 85, 1);
   --nav-height: 80px;
@@ -98,4 +98,8 @@ iframe {
   margin-top: var(--nav-height);
   width: 100%;
   border: none;
+}
+
+.current-iframe > span {
+  background: var(--select-button-color);
 }

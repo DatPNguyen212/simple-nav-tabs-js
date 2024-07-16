@@ -8,14 +8,21 @@ nodesNavButtons.forEach((node) => {
   arrayNavLinks.push(href)
 })
 
-console.log(nodesNavButtons)
+// console.log(nodesNavButtons)
 
-console.log(arrayNavLinks)
+// console.log(arrayNavLinks)
 
 nodesNavButtons.forEach((node) => {
   node.addEventListener('click', (event) => {
     const href = event.target.getAttribute('data-href')
     iframe.setAttribute('src', href)
+    nodesNavButtons.forEach((node) => {
+      if (node.getAttribute('class').includes('current-iframe')) {
+        node.classList.remove('current-iframe')
+      }
+    })
+
+    event.target.classList.add('current-iframe')
   })
 })
 
